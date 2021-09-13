@@ -1,0 +1,23 @@
+/*
+** Dibuat oleh: Yusuf Fazeri
+** No. Peserta: 123456789101-102
+*/
+
+/* 
+** [PRAKTIKAL - 01] | Syntax query operator untuk mencari data dari collection employees yang umurnya tidak lebih dari 50 tahun adalah....
+*/
+db.employees.find({age: { $lte: 50 }})
+
+
+/* 
+** [PRAKTIKAL - 02] | Syntax query untuk mencari data dari collection employees yang umurnya tidak lebih dari 50 tahun dan status fulltime adalah....
+*/
+db.employees.find({ $and: [{age: { $lte: 50 }}, {status: "fulltime"}] })
+
+
+
+/* 
+** Contoh untuk soal yang pilihan jawaban bukan syntax
+** [PRAKTIKAL - 03] | Untuk mengurutkan secara ascending dapat menggunakan value -1
+*/
+db.employees.find().sort({name: 1})
